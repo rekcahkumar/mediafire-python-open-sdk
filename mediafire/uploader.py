@@ -321,13 +321,13 @@ class MediaFireUploader(object):
 
             if int(doupload['result']) != 0:
                 break
-
+            '''
             if doupload['fileerror'] != '':
                 # TODO: we may have to handle this a bit more dramatically
                 logger.warning("poll(%s): fileerror=%d", upload_key,
                                int(doupload['fileerror']))
                 break
-
+            '''
             if int(doupload['status']) == STATUS_NO_MORE_REQUESTS:
                 quick_key = doupload['quickkey']
             elif int(doupload['status']) == STATUS_UPLOAD_IN_PROGRESS:
